@@ -1,13 +1,10 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
-author: "Jacob Tomlinson"
+name: "GitHub Shared Repo Upload Action"
+description: "Helps with Maven uploading to organiation-wide GitHub Packages repos."
+author: "geiremb@gmail.com"
 inputs:
-  myInput:
-    description: "Input to use"
-    default: "world"
-outputs:
-  myOutput:
-    description: "Output from the action"
+  repo_name:
+    description: "Local path of the shared repo to use (organization / repo)."
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
