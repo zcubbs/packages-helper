@@ -18,7 +18,7 @@ settings_contents = f"""
 
 
 def main():
-    repo_name = os.environ["repo_name"]
+    repo_name = os.environ["INPUT_REPO_NAME"]
     if '/' != repo_name[0]:
         repo_name = '/' + repo_name
     deploy_cmd = 'mvn -e -B deploy -DaltDeploymentRepository=' \
