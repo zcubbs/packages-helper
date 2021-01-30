@@ -21,7 +21,7 @@ def main():
     repo_name = os.environ["INPUT_REPO_NAME"]
     if '/' != repo_name[0]:
         repo_name = '/' + repo_name
-    deploy_cmd = 'mvn -e -B deploy -DaltDeploymentRepository=' \
+    deploy_cmd = 'mvnw -e -B deploy -DaltDeploymentRepository=' \
         + f'github::default::https://maven.pkg.github.com{repo_name}'
     if not os.path.exists(settings_dir):
         os.makedirs(settings_dir)
